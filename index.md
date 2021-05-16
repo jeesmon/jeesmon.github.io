@@ -1,3 +1,3 @@
 ## Projects
 
-* [Alvearie Image Ingestion](https://github.com/Alvearie/imaging-ingestion)
+* [Alvearie Imaging Ingestion](https://github.com/Alvearie/imaging-ingestion)
