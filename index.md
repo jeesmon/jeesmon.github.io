@@ -2,6 +2,7 @@
 
 ## Projects
 
+* [operator-utils](https://github.com/jeesmon/operator-utils)
 * [Alvearie Imaging Ingestion](https://github.com/Alvearie/imaging-ingestion)
 * [Malayalam Bible for Android](malayalam-bible-android.md)
 
