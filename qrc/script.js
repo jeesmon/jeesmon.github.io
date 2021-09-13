@@ -38,12 +38,12 @@ window.addEventListener("paste", function(e){
     retrieveImageFromClipboardAsBlob(e, function(imageBlob){
         // If there's an image, display it in the canvas
         if(imageBlob){
-            renderAndScan(imageBlob);
+            renderAndScan(imageBlob, true);
         }
     });
 }, false);
 
-function renderAndScan(imageBlob) {
+function renderAndScan(imageBlob, createObjUrl) {
     var canvas = document.getElementById("qrcode");
     var ctx = canvas.getContext('2d');
 
@@ -60,12 +60,16 @@ function renderAndScan(imageBlob) {
         ctx.drawImage(img, 0, 0);
     };
 
-    // Crossbrowser support for URL
-    var URLObj = window.URL || window.webkitURL;
+    if(createObjUrl){
+        // Crossbrowser support for URL
+        var URLObj = window.URL || window.webkitURL;
 
-    // Creates a DOMString containing a URL representing the object given in the parameter
-    // namely the original Blob
-    img.src = URLObj.createObjectURL(imageBlob);
+        // Creates a DOMString containing a URL representing the object given in the parameter
+        // namely the original Blob
+        img.src = URLObj.createObjectURL(imageBlob);
+    } else {
+        img.src = imageBlob;
+    }
 
     QrScanner.scanImage(img)
         .then(result => writeResult(result))
