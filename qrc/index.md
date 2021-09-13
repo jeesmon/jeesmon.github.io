@@ -22,3 +22,5 @@ Credits:
 * [Javascript On Github Pages](https://code-maven.com/javascript-on-github-pages)
 * [qr-scanner](https://github.com/nimiq/qr-scanner)
 * [Retrieve image from clipboard with JavaScript](https://ourcodeworld.com/articles/read/491/how-to-retrieve-images-from-the-clipboard-with-javascript-in-the-browser)
+<p/>
+[Home](../)
